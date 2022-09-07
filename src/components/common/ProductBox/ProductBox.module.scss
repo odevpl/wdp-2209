@@ -75,4 +75,12 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .priceold {
+    color: $text-price-old;
+    font-size: 16px;
+    text-decoration: line-through;
+    background: none;
+    padding-left: $base-padding*2;
+  }
 }
