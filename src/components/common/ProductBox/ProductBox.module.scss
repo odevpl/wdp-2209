@@ -29,6 +29,7 @@
     }
 
     .buttons {
+      opacity: 0;
       display: flex;
       justify-content: space-between;
     }
@@ -37,7 +38,6 @@
   .content {
     text-align: center;
     padding: 20px;
-
     h5 {
       color: $primary;
       font-size: 16px;
@@ -74,5 +74,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.root:hover, .content:hover, .action.hover, .photo:hover {
+  .buttons{
+    opacity: 1;
+    // transition-delay: 1s
   }
 }
