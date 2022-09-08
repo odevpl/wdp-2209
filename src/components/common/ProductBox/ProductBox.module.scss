@@ -83,3 +83,7 @@
     // transition-delay: 1s
   }
 }
+.active:not(.noHover){
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
