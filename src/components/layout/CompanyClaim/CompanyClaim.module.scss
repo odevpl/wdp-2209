@@ -47,7 +47,10 @@
       }
 
       .cartCounter {
-        width: 28px;
+        min-width: 28px;
+        width: auto;
+        padding-left: 8%;
+        padding-right: 8%;
         height: 27px;
         border-radius: 14px;
         background-color: $header-bg;

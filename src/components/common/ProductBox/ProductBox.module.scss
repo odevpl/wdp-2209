@@ -29,6 +29,7 @@
     }
 
     .buttons {
+      opacity: 0;
       display: flex;
       justify-content: space-between;
     }
@@ -37,7 +38,6 @@
   .content {
     text-align: center;
     padding: 20px;
-
     h5 {
       color: $bbox-hover;
       font-size: 16px;
@@ -75,4 +75,23 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .priceold {
+    color: $text-price-old;
+    font-size: 16px;
+    text-decoration: line-through;
+    background: none;
+    padding-left: $base-padding*2;
+  }
+}
+
+.root:hover, .content:hover, .action.hover, .photo:hover {
+  .buttons{
+    opacity: 1;
+    // transition-delay: 1s
+  }
+}
+.active:not(.noHover){
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
