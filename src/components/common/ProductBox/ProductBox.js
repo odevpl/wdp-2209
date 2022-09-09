@@ -21,6 +21,7 @@ const ProductBox = ({
   favorite,
   toCompare,
   id,
+  image,
 }) => {
   // const dispatch = useDispatch();
   const [isfavorite, setIsFavorite] = useState(favorite);
@@ -32,13 +33,7 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div
-        className={styles.photo}
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
-          backgroundSize: 'cover',
-        }}
-      >
+      <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -102,6 +97,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   favorite: PropTypes.bool,
   toCompare: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default ProductBox;

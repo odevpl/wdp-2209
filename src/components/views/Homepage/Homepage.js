@@ -16,7 +16,7 @@ const Homepage = () => (
     <NewFurniture />
     <ClientFeedback />
     <BrandsBar />
-   </div>
+  </div>
 );
 
 export default Homepage;

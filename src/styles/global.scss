@@ -5,3 +5,13 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
