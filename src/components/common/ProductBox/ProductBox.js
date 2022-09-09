@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { toggleToCompare } from '../../../redux/productsRedux';
 // import { changeIsFavorite } from '../../../redux/productsRedux';
 import {
   faStar,
@@ -27,7 +28,7 @@ const ProductBox = ({
   id,
   image,
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [isfavorite, setIsFavorite] = useState(favorite);
   const toggleIsFavorite = e => {
@@ -41,6 +42,10 @@ const ProductBox = ({
     setShowModal(!showModal);
   };
 
+  const handleCompare = e => {
+    e.preventDefault();
+    dispatch(toggleToCompare(id));
+  };
   return (
     <div className={styles.root}>
       <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
@@ -53,7 +58,6 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
-
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
@@ -70,7 +74,9 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button className={clsx(toCompare && styles.active)} variant='outline'>
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            <FontAwesomeIcon icon={faExchangeAlt} onClick={handleCompare}>
+              Add to compare
+            </FontAwesomeIcon>
           </Button>
         </div>
         {priceOld && (
