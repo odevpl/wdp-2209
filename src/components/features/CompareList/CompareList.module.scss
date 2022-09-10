@@ -1,1 +1,60 @@
 @import "../../../styles/settings.scss";
+
+.compareBox {
+  width: 100%;
+  position: absolute;
+  background-color: $bbox-bg;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-top: 2rem;
+  box-shadow: 2px -3.464px 6px rgba(1, 2, 2, 0.2);
+}
+
+.photo {
+  height: 10rem;
+  width: 10rem;
+  //padding: 10% 20%;
+  position: relative;
+  background: {
+    position: center;
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+  h5 {
+    color: $bbox-hover;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+.buttonCompare {
+  height: fit-content;
+}
+
+.buttonClose {
+  color: $button-bg;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+
+  icon {
+    color: red;
+    font-size: large;
+  }
+}
+
+.photo:hover {
+  opacity: 0.5;
+
+  .buttonClose {
+    opacity: 1;
+  }
+}

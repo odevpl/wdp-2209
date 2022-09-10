@@ -19,7 +19,7 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       favorite: true,
-      toCompare: false,
+      toCompare: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -757,7 +757,6 @@ const initialState = {
     products: [],
   },
 
-
   clientFeedback: [
     {
       id: '1',
@@ -798,7 +797,6 @@ const initialState = {
       id: 'brand6',
       name: 'Brand 6',
       image: 'src=../../images/brands/brand6.png',
-
     },
   ],
 };
