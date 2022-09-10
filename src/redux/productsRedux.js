@@ -1,6 +1,11 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getCompare = ({ products }) =>
+  products.filter(item => item.toCompare === true);
+
+export const getCounttoCompare = ({ products }) =>
+  products.filter(product => product.toCompare === true).length;
 
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
