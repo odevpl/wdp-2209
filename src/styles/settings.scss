@@ -1,6 +1,7 @@
 $base-padding: 24px;
 $primary: #d58e32;
 
+
 // select category dropdown menu
 $text-color: #2a2a2a;
 $text-hover-color: white;
@@ -10,6 +11,7 @@ $text-hover-color: white;
 
 $white: #ffffff;
 $darkOrange: #d58e32;
+
 
 $darkGrayOne: #2a2a2a;
 $darkGrayTwo: #292929;
@@ -60,7 +62,6 @@ $search-bg: $white;
 $search-text: $darkGrayOne;
 $search-hover: $darkOrange;
 
-
 // company claim (header)
 $header-bg: $darkGrayThree;
 $header-icon: $darkOrange;
@@ -90,6 +91,7 @@ $form-border-color: #292929;
 
 $text-price-old: #a5a5a5;
 
+
 // animation
 $animation-name: onHoverColorAnimation;
 $animation-name : onHoverTextAnimation;
@@ -111,3 +113,4 @@ a:hover , li:hover , .iconWrapper:hover , select:hover{
   animation-duration: $animation-time;
   animation-delay: 0.5s;
 }
+
