@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,9 +11,24 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  priceOld,
+  stars,
+  favorite,
+  toCompare,
+  id,
+}) => (
   <div className={styles.root}>
-    <div className={styles.photo}>
+    <div
+      className={styles.photo}
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
+        backgroundSize: 'cover',
+      }}
+    >
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -39,13 +54,20 @@ const ProductBox = ({ name, price, promo, stars }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button className={clsx(favorite && styles.active)} variant='outline'>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button className={clsx(toCompare && styles.active)} variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
+      {priceOld && (
+        <div className={styles.priceold}>
+          <Button noHover variant='light'>
+            $ {priceOld}
+          </Button>
+        </div>
+      )}
       <div className={styles.price}>
         <Button noHover variant='small'>
           $ {price}
@@ -57,10 +79,14 @@ const ProductBox = ({ name, price, promo, stars }) => (
 
 ProductBox.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
+  priceOld: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  favorite: PropTypes.bool,
+  toCompare: PropTypes.bool,
 };
 
 export default ProductBox;

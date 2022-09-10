@@ -1,8 +1,8 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
+  background-color: $bbox-bg;
+  border: 1px solid $bbox-border;
   margin-bottom: 2rem;
 
   .photo {
@@ -22,13 +22,14 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $bbox-sale-box;
       border-radius: 50%;
-      color: #ffffff;
+      color: $bbox-bg;
       padding: 30px 15px 5px 15px;
     }
 
     .buttons {
+      opacity: 0;
       display: flex;
       justify-content: space-between;
     }
@@ -37,9 +38,8 @@
   .content {
     text-align: center;
     padding: 20px;
-
     h5 {
-      color: $primary;
+      color: $bbox-hover;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -48,7 +48,7 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $bbox-stars;
       }
     }
   }
@@ -64,7 +64,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $bbox-hover;
       transform: translateX(-50%);
     }
   }
@@ -75,4 +75,23 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .priceold {
+    color: $text-price-old;
+    font-size: 16px;
+    text-decoration: line-through;
+    background: none;
+    padding-left: $base-padding*2;
+  }
+}
+
+.root:hover, .content:hover, .action.hover, .photo:hover {
+  .buttons{
+    opacity: 1;
+    // transition-delay: 1s
+  }
+}
+.active:not(.noHover){
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
