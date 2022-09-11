@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from './CompareList.module.scss';
-import { getCompare } from '../../../redux/productsRedux';
+import { getCompare, getCounttoCompare } from '../../../redux/productsRedux';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -10,13 +10,17 @@ import { toggleToCompare } from '../../../redux/productsRedux';
 
 const CompareList = () => {
   const toCompare = useSelector(getCompare);
+  const numberOfCompares = useSelector(getCounttoCompare);
 
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleCompare = (e, id) => {
     e.preventDefault();
-    console.log('click');
+
+    dispatch(toggleToCompare(id));
   };
+
+  if (numberOfCompares === 0) return null;
 
   return (
     <section className={styles.compareBox}>
@@ -25,7 +29,7 @@ const CompareList = () => {
           {toCompare.map(product => (
             <div key={product.id} className={'col-2 '}>
               <div
-                onClick={handleCompare}
+                onClick={e => handleCompare(e, product.id)}
                 className={styles.photo}
                 style={{
                   backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${product.id}.jpeg)`,
