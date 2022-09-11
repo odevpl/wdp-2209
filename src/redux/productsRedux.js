@@ -41,13 +41,13 @@ export default function reducer(statePart = [], action = {}) {
       );
 
     case TOGGLE_TO_COMPARE: {
-      if (statePart.filter(product => product.toCompare === true).length <= 4) {
-        return statePart.map(product =>
-          product.id === action.payload
-            ? { ...product, toCompare: !product.toCompare }
-            : product
-        );
-      }
+      // if (statePart.filter(product => product.toCompare === true).length <= 4) {
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, toCompare: !product.toCompare }
+          : product
+      );
+      //}
     }
 
     default:

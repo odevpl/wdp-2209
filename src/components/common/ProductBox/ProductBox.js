@@ -42,7 +42,7 @@ const ProductBox = ({
     setShowModal(!showModal);
   };
 
-  const handleCompare = e => {
+  const handleCompare = (e, id) => {
     e.preventDefault();
     dispatch(toggleToCompare(id));
   };
@@ -74,7 +74,7 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button className={clsx(toCompare && styles.active)} variant='outline'>
-            <FontAwesomeIcon icon={faExchangeAlt} onClick={handleCompare}>
+            <FontAwesomeIcon icon={faExchangeAlt} onClick={e => handleCompare(e, id)}>
               Add to compare
             </FontAwesomeIcon>
           </Button>
