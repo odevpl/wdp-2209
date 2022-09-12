@@ -27,6 +27,7 @@ const ProductBox = ({
 
   const handleCompare = (e, id) => {
     e.preventDefault();
+
     dispatch(toggleToCompare(id));
   };
 

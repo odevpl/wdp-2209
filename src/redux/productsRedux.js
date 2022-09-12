@@ -18,7 +18,6 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const TOGGLE_TO_COMPARE = createActionName('TOGGLE_TO_COMPARE');
 
 /* action creators */
-// export const toggleToCompare = payload => ({ payload, type: TOGGLE_TO_COMPARE });
 
 export const toggleToCompare = payload => ({ payload, type: TOGGLE_TO_COMPARE });
 
@@ -26,12 +25,28 @@ export const toggleToCompare = payload => ({ payload, type: TOGGLE_TO_COMPARE })
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case TOGGLE_TO_COMPARE: {
-      // if (statePart.filter(product => product.toCompare === true).length <= 4) {
-      return statePart.map(product =>
-        product.id === action.payload
-          ? { ...product, toCompare: !product.toCompare }
-          : product
-      );
+      console.log('numberInRedux', getCounttoCompare);
+      return statePart.map(product => {
+        // product.id === action.payload
+        //   ? { ...product, toCompare: !product.toCompare }
+        //   : product
+
+        if (
+          product.id === action.payload &&
+          //getCounttoCompare <= 4 &&
+          product.toCompare === false
+        ) {
+          return { ...product, toCompare: true };
+        } else if (
+          product.id === action.payload &&
+          //getCounttoCompare <= 4 &&
+          product.toCompare === true
+        ) {
+          return { ...product, toCompare: false };
+        } else {
+          return { ...product };
+        }
+      });
       //}
     }
 
