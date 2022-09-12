@@ -94,16 +94,11 @@
   }
 }
 .active:not(.noHover) {
-<<<<<<< HEAD
   background-color: $darkGrayOne;
   color: $white;
-=======
-  background-color: #2a2a2a;
-  color: #ffffff;
 }
 
 .activeCompare:not(.noHover) {
   background-color: $bbox-toCompare;
   color: #ffffff;
->>>>>>> fda6160 (Add to compare)
 }

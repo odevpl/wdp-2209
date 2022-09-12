@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch } from 'react-redux';
-import { toggleToCompare } from '../../../redux/productsRedux';
+
 // import { changeIsFavorite } from '../../../redux/productsRedux';
 import {
   faStar,
@@ -13,13 +13,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-<<<<<<< HEAD
+
 import ProductStars from '../ProductStars/ProductStars';
 import ProductModal from '../ProductModal/ProductModal';
-=======
-import { useDispatch, useSelector } from 'react-redux';
+
 import { getCompare, toggleToCompare } from '../../../redux/productsRedux';
->>>>>>> fda6160 (Add to compare)
 
 const ProductBox = ({
   name,
