@@ -42,29 +42,11 @@ export default function reducer(statePart = [], action = {}) {
       );
 
     case TOGGLE_TO_COMPARE: {
-      console.log('numberInRedux', getCounttoCompare);
-      return statePart.map(product => {
-        // product.id === action.payload
-        //   ? { ...product, toCompare: !product.toCompare }
-        //   : product
-
-        if (
-          product.id === action.payload &&
-          //getCounttoCompare <= 4 &&
-          product.toCompare === false
-        ) {
-          return { ...product, toCompare: true };
-        } else if (
-          product.id === action.payload &&
-          //getCounttoCompare <= 4 &&
-          product.toCompare === true
-        ) {
-          return { ...product, toCompare: false };
-        } else {
-          return { ...product };
-        }
-      });
-      //}
+      return statePart.map(product =>
+        product.id === action.payload
+          ? { ...product, toCompare: !product.toCompare }
+          : product
+      );
     }
 
     default:

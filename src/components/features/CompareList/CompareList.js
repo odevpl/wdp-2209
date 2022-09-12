@@ -13,7 +13,6 @@ const CompareList = () => {
   const numberOfCompares = useSelector(getCounttoCompare);
 
   const dispatch = useDispatch();
-  console.log('numberOnList', numberOfCompares);
   const handleCompare = (e, id) => {
     e.preventDefault();
 
