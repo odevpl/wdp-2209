@@ -237,6 +237,17 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  clientFeedback: [
+    {
+      id: '1',
+      feedback: 'Perfect service, good prices, a lot of support during the process',
+      name: 'John',
+      surname: 'Smith',
+      photo: '/images/clientfeedback/coverforphoto.jpg',
+      description: 'Future client',
+    },
+  ],
 };
 
 export default initialState;

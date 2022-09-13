@@ -1,0 +1,66 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+}
+
+.panelContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.panelBar {
+  height: 1vh;
+  background-color: $fbox-border;
+  width: 90%;
+  margin-right: 2vw;
+
+  .orangePanel {
+    height: 1vh;
+    background-color: $primary;
+    width: 5%;
+    margin-right: 2vw;
+  }
+}
+
+.dot{
+  margin: 2px 2px;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 50%;
+  background-color: $primary;
+}
+
+.dots {
+  margin: 2px 2px;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 50%;
+  background-color: $fbox-border;
+}
+
+.dots:hover{
+  background-color: $primary;
+}
+
+.mark {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  height:20vh;
+}
+
+.description {
+  text-align: center;
+
+}
+
+h3{
+  color: $primary;
+  margin-bottom: 0px;
+}
+
