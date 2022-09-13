@@ -4,8 +4,10 @@ const SalesBox = () => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className={`row ${styles.contentBox}`}>
-          <div className='col-6'>
+        <div
+          className={`mh-100 d-flex flex-xs-row justify-content-center align-items-center row ${styles.contentBox}`}
+        >
+          <div className='col-xs-12 col-md-6 '>
             <div
               className={styles.photoLeft}
               style={{
@@ -24,7 +26,8 @@ const SalesBox = () => {
           </div>
           <div className='col-6'>
             <div className={`row ${styles.paddingBottom}`}>
-              <div className='col-12'>
+              <div className='col-xs-12 col-md-12 '>
+                <div className={styles.gapbox}></div>
                 <div
                   className={styles.photoRight}
                   style={{
@@ -42,7 +45,8 @@ const SalesBox = () => {
                   </div>
                 </div>
               </div>
-              <div className='col-12'>
+              <div className={styles.gapbox}></div>
+              <div className='col-xs-12 col-md-12'>
                 <div
                   className={styles.photoRight}
                   style={{
