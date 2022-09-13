@@ -40,3 +40,14 @@
     }
   }
 }
+
+/* media */
+
+@media (max-width: 575.98px) {
+  .loginText, .registerText {
+    display: none;
+  }
+  .topMenu ul li {
+    margin-left: 1rem !important;
+  }
+}

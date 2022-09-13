@@ -1,0 +1,46 @@
+* [33m9371d50[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mWDP220901-16[m[33m)[m Update settings.scss
+*   [33m1e5e48e[m Merge pull request #7 from odevpl/WDP220901-8
+[32m|[m[33m\[m  
+[32m|[m *   [33m2b416dd[m[33m ([m[1;31morigin/WDP220901-8[m[33m)[m Merge branch 'master' into WDP220901-8
+[32m|[m [34m|[m[32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+* [34m|[m   [33m8ce7e2b[m Merge pull request #6 from odevpl/WDP220901-6
+[36m|[m[1;31m\[m [34m\[m  
+[36m|[m * [34m\[m   [33mcb27af1[m[33m ([m[1;31morigin/WDP220901-6[m[33m)[m Merge branch 'master' into WDP220901-6
+[36m|[m [1;32m|[m[36m\[m [34m\[m  
+[36m|[m [1;32m|[m[36m/[m [34m/[m  
+[36m|[m[36m/[m[1;32m|[m [34m|[m   
+* [1;32m|[m [34m|[m   [33m7beded1[m Merge pull request #5 from odevpl/WDP220901-5
+[1;34m|[m[1;35m\[m [1;32m\[m [34m\[m  
+[1;34m|[m * [1;32m\[m [34m\[m   [33mf545e43[m[33m ([m[1;31morigin/WDP220901-5[m[33m)[m Merge branch 'master' into WDP220901-5
+[1;34m|[m [1;36m|[m[1;34m\[m [1;32m\[m [34m\[m  
+[1;34m|[m [1;36m|[m[1;34m/[m [1;32m/[m [34m/[m  
+[1;34m|[m[1;34m/[m[1;36m|[m [1;32m|[m [34m|[m   
+* [1;36m|[m [1;32m|[m [34m|[m   [33md4cca81[m Merge pull request #4 from odevpl/WDP220901-3
+[32m|[m[33m\[m [1;36m\[m [1;32m\[m [34m\[m  
+[32m|[m * [1;36m|[m [1;32m|[m [34m|[m [33m9fce21f[m[33m ([m[1;31morigin/WDP220901-3[m[33m)[m Feauter boxes style on hover
+* [33m|[m [1;36m|[m [1;32m|[m [34m|[m   [33m8b66e38[m Merge pull request #3 from odevpl/WDP220901-4
+[34m|[m[35m\[m [33m\[m [1;36m\[m [1;32m\[m [34m\[m  
+* [35m\[m [33m\[m [1;36m\[m [1;32m\[m [34m\[m   [33m2d3ab08[m Merge pull request #2 from odevpl/WDP220901-2
+[36m|[m[1;31m\[m [35m\[m [33m\[m [1;36m\[m [1;32m\[m [34m\[m  
+[36m|[m * [35m|[m [33m|[m [1;36m|[m [1;32m|[m [34m|[m [33m1f8db4b[m[33m ([m[1;31morigin/WDP220901-2[m[33m)[m Card counter fixed
+[36m|[m [33m|[m [35m|[m[33m/[m [1;36m/[m [1;32m/[m [34m/[m  
+[36m|[m [33m|[m[33m/[m[35m|[m [1;36m|[m [1;32m|[m [34m|[m   
+* [33m|[m [35m|[m [1;36m|[m [1;32m|[m [34m|[m   [33mfe265f3[m Merge pull request #1 from odevpl/WDP220901-1
+[33m|[m[1;33m\[m [33m\[m [35m\[m [1;36m\[m [1;32m\[m [34m\[m  
+[33m|[m [1;33m|[m[33m/[m [35m/[m [1;36m/[m [1;32m/[m [34m/[m  
+[33m|[m[33m/[m[1;33m|[m [35m|[m [1;36m|[m [1;32m|[m [34m|[m   
+[33m|[m * [35m|[m [1;36m|[m [1;32m|[m [34m|[m [33mf476227[m[33m ([m[1;31morigin/WDP220901-1[m[33m)[m Product images added
+[33m|[m[33m/[m [35m/[m [1;36m/[m [1;32m/[m [34m/[m  
+[33m|[m [35m|[m * [1;32m/[m [34m/[m [33me0835a4[m Add Styles to favorite and toCompare buttons
+[33m|[m [35m|[m[35m/[m [1;32m/[m [34m/[m  
+[33m|[m * [1;32m/[m [34m/[m [33m687474a[m[33m ([m[1;31morigin/WDP220901-4[m[33m)[m Add toggle opacity of buttons by hover cards
+[33m|[m[33m/[m [1;32m/[m [34m/[m  
+[33m|[m * [34m/[m [33m4b4135b[m add old price with line-through
+[33m|[m[33m/[m [34m/[m  
+[33m|[m * [33m3a24ad3[m Add color variables
+[33m|[m[33m/[m  
+* [33m1cc0117[m Add sass
+* [33mad0bfd9[m Update README.md
+* [33m2e769c2[m Init project

@@ -88,10 +88,9 @@
 .root:hover, .content:hover, .action.hover, .photo:hover {
   .buttons{
     opacity: 1;
-    // transition-delay: 1s
   }
 }
 .active:not(.noHover){
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $darkGrayOne;
+  color: $white;
 }
