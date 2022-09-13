@@ -276,9 +276,43 @@ const initialState = {
       toCompare: false,
     },
   ],
+
   cart: {
     products: [],
   },
+
+  brands: [
+    {
+      id: 'brand1',
+      name: 'Brand 1',
+      image: 'src=../../images/brands/brand1.png',
+    },
+    {
+      id: 'brand2',
+      name: 'Brand 2',
+      image: 'src=../../images/brands/brand2.png',
+    },
+    {
+      id: 'brand3',
+      name: 'Brand 3',
+      image: 'src=../../images/brands/brand3.png',
+    },
+    {
+      id: 'brand4',
+      name: 'Brand 4',
+      image: 'src=../../images/brands/brand4.png',
+    },
+    {
+      id: 'brand5',
+      name: 'Brand 5',
+      image: 'src=../../images/brands/brand5.png',
+    },
+    {
+      id: 'brand6',
+      name: 'Brand 6',
+      image: 'src=../../images/brands/brand6.png',
+    },
+  ],
 };
 
 export default initialState;
