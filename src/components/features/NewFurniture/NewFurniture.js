@@ -24,14 +24,13 @@ class NewFurniture extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const resVersion = getResVersion();
+
     const numProdOnPage = () => {
       if (resVersion === 'tablet') {
         return 4;
       } else if (resVersion === 'mobile') return 2;
       else if (resVersion === 'desktop') return 8;
     };
-
-    console.log('number', numProdOnPage());
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / numProdOnPage());
