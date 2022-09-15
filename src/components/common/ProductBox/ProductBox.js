@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useDispatch } from 'react-redux';
 
 // import { changeIsFavorite } from '../../../redux/productsRedux';
 import {
@@ -17,7 +16,12 @@ import Button from '../Button/Button';
 import ProductStars from '../ProductStars/ProductStars';
 import ProductModal from '../ProductModal/ProductModal';
 
-import { getCompare, toggleToCompare } from '../../../redux/productsRedux';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  toggleToCompare,
+  getCounttoCompare,
+  getCompare,
+} from '../../../redux/productsRedux';
 
 const ProductBox = ({
   name,
@@ -31,6 +35,8 @@ const ProductBox = ({
   id,
   image,
 }) => {
+  const numberOfCompares = useSelector(getCounttoCompare);
+
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [isfavorite, setIsFavorite] = useState(favorite);
@@ -48,7 +54,13 @@ const ProductBox = ({
   const handleCompare = (e, id) => {
     e.preventDefault();
 
-    dispatch(toggleToCompare(id));
+    if (numberOfCompares < 4 && toCompare === false) {
+      dispatch(toggleToCompare(id));
+    } else if (numberOfCompares === 4 && toCompare === false) {
+      console.log('cant addmore than 4 do compare');
+    } else if (toCompare === true) {
+      dispatch(toggleToCompare(id));
+    }
   };
   return (
     <div className={styles.root}>

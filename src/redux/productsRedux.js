@@ -1,3 +1,5 @@
+import { isValidElement } from 'react';
+
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;

@@ -12,6 +12,8 @@ const CompareList = () => {
   const toCompare = useSelector(getCompare);
   const numberOfCompares = useSelector(getCounttoCompare);
 
+  console.log('list', toCompare);
+
   const dispatch = useDispatch();
   const handleCompare = (e, id) => {
     e.preventDefault();
@@ -36,7 +38,7 @@ const CompareList = () => {
                 }}
               >
                 <Button className={styles.buttonClose}>
-                  <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faTimes} size='lg'></FontAwesomeIcon>
                 </Button>
               </div>
 
