@@ -60,10 +60,7 @@ const initialState = {
       userStars: 0,
       promo: 'sale',
       newFurniture: true,
-<<<<<<< HEAD
       favorite: false,
-=======
->>>>>>> bbe9d36 (Add to compare v2)
       toCompare: false,
       image: 'https://images.pexels.com/photos/90317/pexels-photo-90317.jpeg',
     },
