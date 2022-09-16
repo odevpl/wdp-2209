@@ -57,7 +57,7 @@ const ProductBox = ({
     if (numberOfCompares < 4 && toCompare === false) {
       dispatch(toggleToCompare(id));
     } else if (numberOfCompares === 4 && toCompare === false) {
-      console.log('cant addmore than 4 do compare');
+      console.log('cant addmore than 4 to compare');
     } else if (toCompare === true) {
       dispatch(toggleToCompare(id));
     }
