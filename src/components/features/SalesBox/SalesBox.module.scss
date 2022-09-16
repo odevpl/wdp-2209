@@ -2,7 +2,7 @@
 .root {
     padding-bottom: 5rem;
 }
-.photo {  
+.photo {
     &Left{
         height: 100%;
         width: 100%;
@@ -13,6 +13,7 @@
         height: 24vh;
         width: 100%;
         position: relative;
+
     }
 
 }
@@ -31,7 +32,7 @@
         line-height:40px;
         span{
             font-size: 50px;
-            
+
         }
     }
     p{
@@ -96,5 +97,19 @@
     height: 100%;
 }
 .contentBox{
-    height: 50vh;
+    height: 100%;
+}
+
+@media (max-width: 426px) {
+    .contentTextDown , .contentTextUp{
+        h3 , span , p {
+            font-size: 3vh;
+        }
+    }
+
+    .gapbox{
+        height:1vh;
+        width:100vw;
+    }
+
 }
