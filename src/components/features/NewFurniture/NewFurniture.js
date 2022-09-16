@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../common/Swipeable/Swipeable';
+import getResVersion from '../../utils/getResVersion';
 
 class NewFurniture extends React.Component {
   state = {
@@ -23,8 +23,17 @@ class NewFurniture extends React.Component {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    const resVersion = getResVersion();
+
+    const numProdOnPage = () => {
+      if (resVersion === 'tablet') {
+        return 4;
+      } else if (resVersion === 'mobile') return 2;
+      else if (resVersion === 'desktop') return 8;
+    };
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / numProdOnPage());
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -86,7 +95,7 @@ class NewFurniture extends React.Component {
             </div>
             <div className='row'>
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(activePage * numProdOnPage(), (activePage + 1) * numProdOnPage())
                 .map(item => (
                   <div key={item.id} className='col-3'>
                     <ProductBox {...item} />
