@@ -7,16 +7,15 @@ import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import PromotedBox from '../../features/PromotedBox/PromotedBox';
 import SalesBox from '../../features/SalesBox/SalesBox';
 
-
 const Homepage = () => (
   <div className={styles.root}>
     <PromotedBox />
     <FeatureBoxes />
     <SalesBox />
     <NewFurniture />
-    <ClientFeedback />
     <BrandsBar />
-   </div>
+    <ClientFeedback />
+  </div>
 );
 
 export default Homepage;

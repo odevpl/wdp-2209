@@ -281,7 +281,6 @@ const initialState = {
     products: [],
   },
 
-
   clientFeedback: [
     {
       id: '1',
@@ -290,7 +289,23 @@ const initialState = {
       surname: 'Smith',
       photo: '/images/clientfeedback/coverforphoto.jpg',
       description: 'Future client',
-    }
+    },
+    {
+      id: '2',
+      feedback: 'I did enojy the service but it could have been better',
+      name: 'Jimmy',
+      surname: 'Alan',
+      photo: '/images/clientfeedback/coverforphoto.jpg',
+      description: 'Future client',
+    },
+    {
+      id: '3',
+      feedback: 'I did like it ',
+      name: 'Chris',
+      surname: 'Adams',
+      photo: '/images/clientfeedback/coverforphoto.jpg',
+      description: 'Future client',
+    },
   ],
   brands: [
     {
@@ -322,7 +337,6 @@ const initialState = {
       id: 'brand6',
       name: 'Brand 6',
       image: 'src=../../images/brands/brand6.png',
-
     },
   ],
 };

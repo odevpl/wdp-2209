@@ -1,66 +1,83 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: 5rem 0;
-}
+  margin-bottom: 10vh;
 
-.panelContainer {
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
 
-.panelBar {
-  height: 1vh;
-  background-color: $fbox-border;
-  width: 90%;
-  margin-right: 2vw;
-
-  .orangePanel {
-    height: 1vh;
-    background-color: $primary;
-    width: 5%;
-    margin-right: 2vw;
+  .panelBar {
+    display:block;
+    margin-bottom: 10px;
+    position: relative;
   }
+
+    .linedotscontainer{
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      align-items: center;
+
+      .line {
+        height: 1vh;
+        background-color: $bbox-old-price;
+        width: 90%;
+        margin-right: 2vw;
+
+        .orangeLine {
+          height: 1vh;
+          background-color: $primary;
+          width: 5%;
+          margin-right: 2vw;
+        }
+      }
+    }
+
+    h3 {
+      color: $primary;
+      font-size: 6vh;
+      line-height: 7vh;
+      margin: 0;
+    }
+
+      ul {
+        width: 11vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $bbox-bg;
+
+        li {
+          padding: 1vh;
+          display: inline-block;
+
+          a {
+            font-size: 0;
+            display: block;
+            width: 3vh;
+            height: 3vh;
+            border-radius: 50%;
+            background-color: $bbox-old-price;
+
+            &.active
+            {
+              background-color: $primary;
+            }
+          }
+
+          a:hover  {
+            background-color: $primary;
+          }
+        }
+      }
+
+    img {
+      width: 10vh;
+      height: 10vh;
+    }
+
+    .line {
+      height: 1vh;
+      background-color: $fbox-border;
+      width: 90%;
+      margin-right: 2vw;
+    }
 }
-
-.dot{
-  margin: 2px 2px;
-  height: 3vh;
-  width: 3vh;
-  border-radius: 50%;
-  background-color: $primary;
-}
-
-.dots {
-  margin: 2px 2px;
-  height: 3vh;
-  width: 3vh;
-  border-radius: 50%;
-  background-color: $fbox-border;
-}
-
-.dots:hover{
-  background-color: $primary;
-}
-
-.mark {
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vw;
-  height:20vh;
-}
-
-.description {
-  text-align: center;
-
-}
-
-h3{
-  color: $primary;
-  margin-bottom: 0px;
-}
-

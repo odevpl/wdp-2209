@@ -5,6 +5,7 @@ import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import brandsReducer from './brandsRedux';
+import ClientFeedback from './clientFeedbackRedux';
 
 // define reducers
 const reducers = {
@@ -12,6 +13,7 @@ const reducers = {
   categories: categoriesReducer,
   products: productsReducer,
   brands: brandsReducer,
+  feedback: ClientFeedback,
 };
 
 Object.keys(initialState).forEach(item => {

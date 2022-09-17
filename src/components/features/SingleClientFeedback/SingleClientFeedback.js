@@ -2,25 +2,25 @@ import React from 'react';
 import styles from './SingleClientFeedback.module.scss';
 
 // eslint-disable-next-line react/prop-types
-const SingleClientFeedback = ({ feedback, name, surname, photo, description }) => {
+const SingleClientFeedback = ({ id, feedback, photo, name, surname, description }) => {
   return (
-    <>
-      <h2>{feedback}</h2>
-      <div className={styles.photonamedata}>
-        <div className={styles.photo}>
-          <img
-            height='70vh'
-            src={`${process.env.PUBLIC_URL}/images/clientfeedback/coverforphoto.jpg`}
-          />
-        </div>
-        <div className={styles.data}>
-          <p>
-            {name} {surname}
-          </p>
-          <p>{description}</p>
+    <div key={id} className='text-center'>
+      <div>
+        <p className={styles.marksign}>{`"`}</p>
+        <p>{feedback}</p>
+        <div
+          className={'mt-4 d-flex flex-row justify-content-center align-items-center '}
+        >
+          <img src={`${process.env.PUBLIC_URL}${photo}`} alt={photo} />
+          <div>
+            <p>
+              {name} {surname}
+            </p>
+            <p>{description}</p>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
