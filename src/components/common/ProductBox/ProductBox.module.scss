@@ -81,16 +81,19 @@
     font-size: 16px;
     text-decoration: line-through;
     background: none;
-    padding-left: $base-padding*2;
+    padding-left: $base-padding * 2;
   }
 }
 
-.root:hover, .content:hover, .action.hover, .photo:hover {
-  .buttons{
+.root:hover,
+.content:hover,
+.action.hover,
+.photo:hover {
+  .buttons {
     opacity: 1;
   }
 }
-.active:not(.noHover){
+.active:not(.noHover) {
   background-color: $darkGrayOne;
   color: $white;
 }
