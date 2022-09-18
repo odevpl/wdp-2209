@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { toggleProductStars } from '../../../redux/productsRedux';
@@ -11,7 +11,7 @@ const ProductStars = ({ stars, id, userStars }) => {
   const [hover, setHover] = useState(0);
 
   const dispatch = useDispatch();
-  const [starsAmount, setStarsAmount] = useState(stars);
+  const [starsAmount] = useState(stars);
   const [userStarsAmount, setUserStarsAmount] = useState(userStars);
 
   const toggleStarsAmount = (e, starsNumber) => {
@@ -19,7 +19,6 @@ const ProductStars = ({ stars, id, userStars }) => {
     dispatch(toggleProductStars({ id, starsNumber }));
     setUserStarsAmount(starsNumber);
   };
-  console.log('hover', hover);
 
   return (
     <div className={styles.stars}>
