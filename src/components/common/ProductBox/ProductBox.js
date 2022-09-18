@@ -35,8 +35,6 @@ const ProductBox = ({
   id,
   image,
 }) => {
-  const numberOfCompares = useSelector(getCounttoCompare);
-
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [isfavorite, setIsFavorite] = useState(favorite);
@@ -50,16 +48,17 @@ const ProductBox = ({
     e.preventDefault();
     setShowModal(!showModal);
   };
+  const numberOfCompares = useSelector(getCounttoCompare);
+  const prodId = id;
 
-  const handleCompare = (e, id) => {
+  const handleCompare = (e, prodId) => {
     e.preventDefault();
-
     if (numberOfCompares < 4 && toCompare === false) {
-      dispatch(toggleToCompare(id));
+      dispatch(toggleToCompare(prodId));
     } else if (numberOfCompares === 4 && toCompare === false) {
-      console.log('cant addmore than 4 to compare');
+      console.log('cant add more than 4 to compare');
     } else if (toCompare === true) {
-      dispatch(toggleToCompare(id));
+      dispatch(toggleToCompare(prodId));
     }
   };
   return (
@@ -90,7 +89,10 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button className={clsx(toCompare && styles.activeCompare)} variant='outline'>
-            <FontAwesomeIcon icon={faExchangeAlt} onClick={e => handleCompare(e, id)}>
+            <FontAwesomeIcon
+              icon={faExchangeAlt}
+              onClick={e => handleCompare(e, prodId)}
+            >
               Add to compare
             </FontAwesomeIcon>
           </Button>

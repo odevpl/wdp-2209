@@ -12,12 +12,9 @@ const CompareList = () => {
   const toCompare = useSelector(getCompare);
   const numberOfCompares = useSelector(getCounttoCompare);
 
-  console.log('list', toCompare);
-
   const dispatch = useDispatch();
   const handleCompare = (e, id) => {
     e.preventDefault();
-
     dispatch(toggleToCompare(id));
   };
 
