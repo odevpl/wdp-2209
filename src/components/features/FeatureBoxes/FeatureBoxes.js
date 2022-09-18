@@ -15,8 +15,8 @@ import FeatureBox from '../../common/FeatureBox/FeatureBox';
 const FeatureBoxes = () => (
   <div className={styles.root}>
     <div className='container'>
-      <div className='row'>
-        <div className='col'>
+      <div className='row d-flex flex-sm-column flex-md-row flex-lg-row '>
+        <div className='col-sm-12 col-md-6 col-lg-3 col-xl-3'>
           <Link to='/'>
             <FeatureBox icon={faTruck}>
               <h5>Free shipping</h5>
@@ -24,7 +24,7 @@ const FeatureBoxes = () => (
             </FeatureBox>
           </Link>
         </div>
-        <div className='col'>
+        <div className='col-sm-12 col-md-6 col-lg-3 col-xl-3'>
           <Link to='/'>
             <FeatureBox icon={faHeadphones}>
               <h5>24/7 customer</h5>
@@ -32,7 +32,7 @@ const FeatureBoxes = () => (
             </FeatureBox>
           </Link>
         </div>
-        <div className='col'>
+        <div className='col-sm-12 col-md-6 col-lg-3 col-xl-3'>
           <Link to='/'>
             <FeatureBox icon={faReplyAll}>
               <h5>Money back</h5>
@@ -40,7 +40,7 @@ const FeatureBoxes = () => (
             </FeatureBox>
           </Link>
         </div>
-        <div className='col'>
+        <div className='col-sm-12 col-md-6 col-lg-3 col-xl-3'>
           <Link to='/'>
             <FeatureBox icon={faBullhorn}>
               <h5>Member discount</h5>

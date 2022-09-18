@@ -52,6 +52,19 @@ $fbox-text: $darkGrayOne;
 $fbox-bg: $white;
 $fbox-hover: $darkOrange;
 
+// promoted box
+$pormo-heading-bg: $darkGrayOne;
+$promo-bg: $darkGrayOne;
+$promo-box-text: $white;
+$promo-shade-bg:rgba(0, 0, 0, 0.493);
+$promo-light-button: $white;
+$promo-light-button-text: $darkGrayOne;
+$promo-arrow-buttons-bg:$darkOrange;
+
+// select category dropdown menu
+$text-color: #2a2a2a;
+$text-hover-color: white;
+
 // product box
 $bbox-bg: $white;
 $bbox-border: $lightGrayThree;
@@ -97,6 +110,12 @@ $tbar-bg: $darkGrayFour;
 $tbar-hover: $darkOrange;
 $tbar-text: $white;
 
+
 $form-border-color: #292929;
 
 $text-price-old: #a5a5a5;
+
+$brandsBar-border: $lightGrayFive;
+
+$brandBox-border: $lightGrayFive;
+

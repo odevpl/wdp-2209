@@ -1,0 +1,115 @@
+@import "../../../styles/settings.scss";
+.root {
+    padding-bottom: 5rem;
+}
+.photo {
+    &Left{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding: 25px;
+    }
+    &Right{
+        height: 24vh;
+        width: 100%;
+        position: relative;
+
+    }
+
+}
+.blackOut{
+    background-color: rgba(0, 0, 0, 0.185);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    color:white;
+    h3{
+        font-weight: bold;
+        font-size: 30px;
+        line-height:40px;
+        span{
+            font-size: 50px;
+
+        }
+    }
+    p{
+        font-weight: 600;
+        border: 3px solid white;
+        width: 130px;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.contentTextUp{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    span{
+        font-weight: bold;
+    }
+    h3{
+        font-size: 25px;
+        margin: 0;
+    }
+    h4{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 28px;
+        margin: 0;
+        font-weight: 600;
+        color: $darkOrange;
+    }
+}
+
+.contentTextDown{
+    position: absolute;
+    top: 50%;
+    right:5%;
+    transform: translate(0,-50%);
+    text-align: right;
+    h3{
+        font-size: 25px;
+        color: $darkOrange;
+        span{
+            font-weight: Bold;
+        }
+        margin: 0;
+    }
+    p{
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+.paddingBottom{
+    display: flex;
+    align-content: space-between;
+    height: 100%;
+}
+.contentBox{
+    height: 100%;
+}
+
+@media (max-width: 426px) {
+    .contentTextDown , .contentTextUp{
+        h3 , span , p {
+            font-size: 3vh;
+        }
+    }
+
+    .gapbox{
+        height:1vh;
+        width:100vw;
+    }
+
+}
