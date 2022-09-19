@@ -17,7 +17,7 @@
       align-items: center;
 
       .line {
-        height: 1rem;
+        height: 0.5rem;
         background-color: $bbox-old-price;
         width: 90%;
         margin-right: 2vw;
@@ -52,10 +52,11 @@
           a {
             font-size: 0;
             display: block;
-            width: 1rem;
-            height: 1rem;
+            width: 0.8rem;
+            height: 0.8rem;
             border-radius: 50%;
             background-color: $bbox-old-price;
+            line-height: 1rem;
 
             &.active
             {

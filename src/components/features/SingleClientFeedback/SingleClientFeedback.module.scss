@@ -5,11 +5,14 @@ p {
 }
 
 .marksign {
+  text-align: center;
   color: $text-color;
-  font-size: 4rem;
+  width:2rem;
+  height: 2rem;
 }
 
-img {
-  height: 3rem;
-  width: 1rem;
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

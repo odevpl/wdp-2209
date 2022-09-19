@@ -1,12 +1,18 @@
 import React from 'react';
 import styles from './SingleClientFeedback.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 // eslint-disable-next-line react/prop-types
 const SingleClientFeedback = ({ id, feedback, photo, name, surname, description }) => {
   return (
     <div key={id} className='text-center'>
       <div>
-        <p className={styles.marksign}>{`"`}</p>
+        <div className={styles.wrap}>
+          <p className={styles.marksign}>
+            <FontAwesomeIcon icon={faQuoteRight} />
+          </p>
+        </div>
         <p>{feedback}</p>
         <div
           className={'mt-4 d-flex flex-row justify-content-center align-items-center '}
