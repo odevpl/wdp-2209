@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link, Routes } from 'react-router-dom';
 
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,27 +22,25 @@ const MenuBar = ({ children }) => (
         <div className={'col-auto ' + styles.menu}>
           <ul>
             <li>
-              <a href='#' className={styles.active}>
-                Home
-              </a>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <Link to={'/furniture'}>Furniture</Link>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <Link to={'/chair'}>Chair</Link>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <Link to={'/table'}>Table</Link>
             </li>
             <li>
-              <a href='#'>Sofa</a>
+              <Link to={'/sofa'}>Sofa</Link>
             </li>
             <li>
-              <a href='#'>Bedroom</a>
+              <Link to={'/bedroom'}>Bedroom</Link>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <Link to={'/blog'}>Blog</Link>
             </li>
           </ul>
         </div>
