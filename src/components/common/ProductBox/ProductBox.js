@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import { changeIsFavorite } from '../../../redux/productsRedux';
 import {
@@ -12,15 +13,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import ProductStars from '../ProductStars/ProductStars';
-
 const ProductBox = ({
   name,
   price,
   promo,
   priceOld,
   stars,
-  userStars,
   favorite,
   toCompare,
   id,
@@ -35,25 +33,36 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div
-        className={styles.photo}
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
-          backgroundSize: 'cover',
-        }}
-      >
-        {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+      <Link to={`/product/${name}-${id}`}>
+        <div
+          className={styles.photo}
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
+            backgroundSize: 'cover',
+          }}
+        >
+          {promo && <div className={styles.sale}>{promo}</div>}
+          <div className={styles.buttons}>
+            <Button variant='small'>Quick View</Button>
+            <Button variant='small'>
+              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+            </Button>
+          </div>
         </div>
-
-      </div>
+      </Link>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <ProductStars stars={stars} userStars={userStars} id={id} />
+        <div className={styles.stars}>
+          {[1, 2, 3, 4, 5].map(i => (
+            <a key={i} href='#'>
+              {i <= stars ? (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              ) : (
+                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+              )}
+            </a>
+          ))}
+        </div>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -94,7 +103,6 @@ ProductBox.propTypes = {
   priceOld: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
-  userStars: PropTypes.number,
   favorite: PropTypes.bool,
   toCompare: PropTypes.bool,
 };
