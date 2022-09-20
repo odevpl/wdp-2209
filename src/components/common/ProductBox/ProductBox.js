@@ -12,12 +12,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import ProductStars from '../ProductStars/ProductStars';
 const ProductBox = ({
   name,
   price,
   promo,
   priceOld,
   stars,
+  userStars,
   favorite,
   toCompare,
   id,
@@ -83,17 +85,7 @@ const ProductBox = ({ name, price, promo, priceOld, stars, favorite, toCompare, 
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <ProductStars stars={stars} userStars={userStars} id={id} />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -134,6 +126,7 @@ ProductBox.propTypes = {
   priceOld: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  userStars: PropTypes.number,
   favorite: PropTypes.bool,
   toCompare: PropTypes.bool,
 };

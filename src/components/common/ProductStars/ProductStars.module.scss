@@ -1,0 +1,15 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+  a {
+    text-decoration: none;
+    color: $bbox-stars;
+  }
+  a:hover {
+    color: $bbox-hover;
+  }
+}
+
+.userStars {
+  color: $bbox-hover;
+}
