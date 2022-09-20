@@ -13,6 +13,7 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import ProductStars from '../ProductStars/ProductStars';
+
 const ProductBox = ({
   name,
   price,
@@ -32,39 +33,6 @@ const ProductBox = ({
     setIsFavorite(!isfavorite);
   };
 
-
-
-const ProductBox = ({ name, price, promo, priceOld, stars, favorite, toCompare, id }) => (
-
-  <div className={styles.root}>
-    <div
-      className={styles.photo}
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
-        backgroundSize: 'cover',
-      }}
-    >
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
-      </div>
-    </div>
-    <div className={styles.content}>
-      <h5>{name}</h5>
-      <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
-
   return (
     <div className={styles.root}>
       <div
@@ -81,7 +49,6 @@ const ProductBox = ({ name, price, promo, priceOld, stars, favorite, toCompare, 
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
-
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
