@@ -6,7 +6,7 @@ import ClientFeedback from '../../features/ClientFeedback/ClientFeedback';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import PromotedBox from '../../features/PromotedBox/PromotedBox';
 import SalesBox from '../../features/SalesBox/SalesBox';
-
+import Blog from '../Blog/Blog';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -15,8 +15,9 @@ const Homepage = () => (
     <SalesBox />
     <NewFurniture />
     <ClientFeedback />
+    <Blog />
     <BrandsBar />
-   </div>
+  </div>
 );
 
 export default Homepage;

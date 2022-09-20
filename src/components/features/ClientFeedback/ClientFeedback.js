@@ -22,7 +22,6 @@ const ClientFeedback = () => {
         {clientFeedback.map(clientfeedback => (
           <SingleClientFeedback key={clientfeedback.id} {...clientfeedback} />
         ))}
-        ;
       </div>
     </div>
   );
