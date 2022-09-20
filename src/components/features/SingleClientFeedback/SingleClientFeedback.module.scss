@@ -1,21 +1,18 @@
 @import "../../../styles/settings.scss";
 
-h2 {
-  text-align: center;
-}
-
-.photonamedata {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.data {
-  margin: 0;
-  padding:0;
-}
-
 p {
   margin: 0;
+}
+
+.marksign {
+  text-align: center;
+  color: $text-color;
+  width:2rem;
+  height: 2rem;
+}
+
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
