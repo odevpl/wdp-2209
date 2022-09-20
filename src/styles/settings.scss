@@ -1,10 +1,17 @@
 $base-padding: 24px;
 $primary: #d58e32;
 
+
+// select category dropdown menu
+$text-color: #2a2a2a;
+$text-hover-color: white;
+
+
 // ====== COLORS - DO NOT USE IN CODE DIRECTLY, check next comment like this below =======
 
 $white: #ffffff;
 $darkOrange: #d58e32;
+
 
 $darkGrayOne: #2a2a2a;
 $darkGrayTwo: #292929;
@@ -97,7 +104,32 @@ $form-border-color: #292929;
 
 $text-price-old: #a5a5a5;
 
+
+
+// animation
+$animation-name: onHoverColorAnimation;
+$animation-name : onHoverTextAnimation;
+$animation-time: 250ms;
+$animation-color1: #e5b3349e;
+
+@keyframes onHoverTextAnimation {
+  0%   {color:$primary; transform: translateY(0%)}
+  100% {color:$animation-color1;transform: translateY(10%) }
+}
+
+@keyframes onHoverBackgroundColorAnimation {
+  0%   {background-color:$primary}
+  100% {background-color:$animation-color1}
+}
+
+a:hover , li:hover , .iconWrapper:hover , select:hover{
+  animation-name: onHoverTextAnimation;
+  animation-duration: $animation-time;
+  animation-delay: 0.5s;
+}
+
 $brandsBar-border: $lightGrayFive;
 
 $brandBox-border: $lightGrayFive;
+
 
