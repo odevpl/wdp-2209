@@ -49,7 +49,12 @@ const ProductBox = ({
             </Button>
           </div>
         </div>
+
       </Link>
+
+
+
+      </div>
 
       <div className={styles.content}>
         <h5>{name}</h5>

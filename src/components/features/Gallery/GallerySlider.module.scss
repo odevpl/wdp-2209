@@ -1,0 +1,270 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $gallery-background;
+  border: 1px solid $gallery-border;
+  margin-top: 30px;
+}
+
+.categories {
+  & > * {
+    text-align: center;
+  }
+
+  a {
+    color: $gallery-text-main;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    border-right: 1px solid $gallery-border;
+    margin-right: -1px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    &:hover,
+    &.active {
+      background-color: $gallery-background-active;
+      color: $gallery-text-two;
+    }
+  }
+}
+
+.photo {
+  position: relative;
+  height: 410px;
+  background: {
+    position: center;
+    repeat: no-repeat;
+  }
+  .badge {
+    text-align: center;
+    .price {
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      bottom: 30%;
+      right: 20%;
+      z-index: 1;
+      height: 105px;
+      width: 105px;
+      border-radius: 50%;
+      background-color: rgba(123, 123, 124, 0.8);
+      &:first-child {
+        padding-top: 30px;
+        margin: 0;
+      }
+      &:nth-child(1) {
+        color: $gallery-text-four;
+        text-decoration: line-through;
+        margin: 0;
+      }
+    }
+
+    h4 {
+      color: $gallery-text-four;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .nameBadge {
+      width: 250px;
+      height: 107px;
+      background-color: $gallery-light-accent;
+      position: absolute;
+      bottom: 10%;
+      right: calc(20% - 63px);
+      line-height: 107px;
+      display: inline-block;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30px 30px 0 0;
+        border-color: $gallery-dark-accent transparent;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 30px 30px;
+        border-color: $gallery-dark-accent transparent;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+      }
+
+      h5 {
+        margin-top: 30px;
+      }
+      //vertical-align: middle;
+      &:nth-child(2) {
+        line-height: 20px;
+      }
+    }
+  }
+
+  .stars {
+    color: $gallery-dark-accent;
+    border-color: $gallery-border;
+  }
+}
+
+.sliderList {
+  height: 87px;
+  border: 1px solid $gallery-border;
+
+  .product {
+    height: 70px;
+    width: 70px;
+    margin: 8px 7px 8px 0;
+    cursor: pointer;
+    background: {
+      position: center;
+      repeat: no-repeat;
+    }
+    background-color: rgba(177, 176, 165, 0.8);
+    background-blend-mode: soft-light;
+
+    &:hover,
+    &active,
+    &:nth-child(4) {
+      background-blend-mode: normal;
+    }
+  }
+}
+
+.sliderArrow {
+  background-color: $gallery-dark-accent;
+  width: 33px;
+  height: 70px;
+  text-align: center;
+  &:first-of-type {
+    margin: 8px 7px;
+  }
+  &:last-of-type {
+    margin: 8px 7px 8px 0;
+  }
+  &:first-child,
+  &:last-child {
+    line-height: 70px;
+    color: $gallery-text-four;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:hover {
+      color: $gallery-text-two;
+    }
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 30%;
+  & > * {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    &:not(.noHover):hover {
+      background-color: transparent;
+      color: $gallery-text-two;
+      border-color: $gallery-button-border;
+    }
+    &:hover + .tooltiptext {
+      visibility: visible;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltiptext {
+  visibility: hidden;
+  white-space: nowrap;
+  width: fit-content;
+  padding: 5px;
+  background-color: $gallery-dark;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+
+  &:first-of-type {
+    top: 0;
+    left: 105%;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 87%;
+      top: 5px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid $gallery-dark;
+      border-bottom: 13px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  &:nth-of-type(2) {
+    top: 44px;
+    left: 105%;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 88%;
+      top: 5px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid $gallery-dark;
+      border-bottom: 13px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  &:nth-of-type(3) {
+    top: 88px;
+    left: 105%;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 83%;
+      top: 5px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid $gallery-dark;
+      border-bottom: 13px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  &:nth-of-type(4) {
+    top: 132px;
+    left: 105%;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 83%;
+      top: 5px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid $gallery-dark;
+      border-bottom: 13px solid transparent;
+      z-index: -1;
+    }
+  }
+}
