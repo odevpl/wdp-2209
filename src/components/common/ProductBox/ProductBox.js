@@ -13,6 +13,7 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import ProductStars from '../ProductStars/ProductStars';
+import ProductModal from '../ProductModal/ProductModal';
 
 const ProductBox = ({
   name,
@@ -26,11 +27,17 @@ const ProductBox = ({
   id,
 }) => {
   // const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
   const [isfavorite, setIsFavorite] = useState(favorite);
   const toggleIsFavorite = e => {
     e.preventDefault();
     // dispatch(changeIsFavorite(id));
     setIsFavorite(!isfavorite);
+  };
+
+  const handleModal = e => {
+    e.preventDefault();
+    setShowModal(!showModal);
   };
 
   return (
@@ -44,7 +51,9 @@ const ProductBox = ({
       >
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
+          <Button variant='small' onClick={handleModal}>
+            Quick View
+          </Button>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
@@ -81,6 +90,24 @@ const ProductBox = ({
           </Button>
         </div>
       </div>
+      {showModal && (
+        <ProductModal
+          productData={{
+            name,
+            price,
+            promo,
+            priceOld,
+            stars,
+            userStars,
+            favorite,
+            toCompare,
+            id,
+          }}
+          handleModal={handleModal}
+          isfavorite={isfavorite}
+          toggleIsFavorite={toggleIsFavorite}
+        />
+      )}
     </div>
   );
 };
