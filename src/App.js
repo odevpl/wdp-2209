@@ -12,6 +12,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 import Blog from './components/views/Blog/Blog';
+import Register from './components/views/Register/Register';
 
 const App = () => (
   <Provider store={store}>
@@ -22,6 +23,7 @@ const App = () => (
           <Route path={'/shop/:categoryId'} element={<ProductList />} />
           <Route path={'/product/:productId'} element={<ProductPage />} />
           <Route path={'/blog'} element={<Blog />} />
+          <Route path={'/register'} element={<Register />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
