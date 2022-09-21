@@ -9,6 +9,7 @@ import ClientFeedback from '../../features/ClientFeedback/ClientFeedback';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import PromotedBox from '../../features/PromotedBox/PromotedBox';
 import SalesBox from '../../features/SalesBox/SalesBox';
+import Shop from '../Shop/Shop';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -18,8 +19,7 @@ const Homepage = () => (
     <NewFurniture />
     <Gallery />
     <ClientFeedback />
-    <BrandsBar />
-   </div>
+  </div>
 );
 
 export default Homepage;
