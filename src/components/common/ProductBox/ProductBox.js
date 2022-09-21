@@ -49,6 +49,7 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
+
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>

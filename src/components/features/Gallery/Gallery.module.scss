@@ -1,0 +1,74 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.heading {
+  position: relative;
+
+  h3 {
+    color: $furniture-hover;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 38px;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 45px;
+    border-bottom: 4px solid $furniture-hover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 45px;
+    width: calc(100% - 45px);
+    border-bottom: 4px solid $gallery-border;
+  }
+}
+
+.leftPhoto {
+  height: 603px;
+  background-position: center;
+}
+
+.photoInfo {
+  padding-top: 5rem;
+  padding-left: 5rem;
+
+  span {
+    color: $gallery-text-main;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  h1:first-of-type {
+    color: $gallery-text-three;
+  }
+
+  h1:nth-of-type(2) {
+    color: $gallery-text-two;
+  }
+
+  button {
+    background-color: $gallery-btn;
+    border: none;
+    border-radius: 5%;
+    height: 55px;
+    width: 135px;
+    color: $button-text;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
+}
