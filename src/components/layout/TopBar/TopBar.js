@@ -1,5 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -38,10 +39,10 @@ const TopBar = () => (
               </a>
             </li>
             <li>
-              <a href='#'>
+              <Link to={'/register'}>
                 <FontAwesomeIcon className={styles.icon} icon={faLock} />{' '}
                 <span className={styles.registerText}>Register</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a href='#'>

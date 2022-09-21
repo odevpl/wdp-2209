@@ -1,0 +1,128 @@
+@import "../../../styles/settings.scss";
+
+.flexcontainer{
+  padding: 1rem 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .smallercontainer{
+
+    display:flex;
+    flex-direction: column;
+
+    .inputcontainer{
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 1rem;
+      justify-content: space-around;
+
+      div {
+        padding: 1rem;
+      }
+
+
+
+    }
+
+    .datacontainer {
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      input {
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+
+      p {
+        font-weight: 600;
+      }
+    }
+
+    .toggleswitchcontainer {
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .toggleswitch {
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 2rem;
+        height: 1rem;
+        background-color:$promo-box-text;
+        border: 2px solid $bbox-old-price;
+        border-radius: 12px;
+        padding-left:2px;
+
+        div {
+
+          height:0.5rem;
+          width:0.5rem;
+          background-color: $pormo-heading-bg;
+          border-radius: 50%;
+        }
+      }
+
+      p {
+        padding-left: 5px;
+        color: $bbox-old-price
+      }
+    }
+
+    .acceptscontainer {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+
+          label {
+            padding:0;
+            margin: 0;
+            font-size: 10px;
+
+            span {
+              padding-left :10px;
+            }
+
+          span>span {
+            color: $primary;
+            padding: 1px;
+            margin: 0px;
+          }
+        }
+      }
+    }
+
+    .backbuttoncontainer {
+      display: flex;
+      padding-top: 2rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        color: $primary;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        background-color: $primary;
+        color: $text-hover-color;
+        border: none;
+      }
+    }
+  }
+}
