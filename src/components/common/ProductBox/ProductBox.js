@@ -53,6 +53,7 @@ const ProductBox = ({
 
   const handleCompare = (e, prodId) => {
     e.preventDefault();
+
     if (numberOfCompares < 4 && toCompare === false) {
       dispatch(toggleToCompare(prodId));
     } else if (numberOfCompares === 4 && toCompare === false) {
@@ -88,13 +89,12 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button className={clsx(toCompare && styles.activeCompare)} variant='outline'>
-            <FontAwesomeIcon
-              icon={faExchangeAlt}
-              onClick={e => handleCompare(e, prodId)}
-            >
-              Add to compare
-            </FontAwesomeIcon>
+          <Button
+            className={clsx(toCompare && styles.activeCompare)}
+            variant='outline'
+            onClick={e => handleCompare(e, prodId)}
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         {priceOld && (
