@@ -48,7 +48,7 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       favorite: false,
-      toCompare: true,
+      toCompare: false,
     },
     {
       id: 'aenean-ru-bristique-4',
