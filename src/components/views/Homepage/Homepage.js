@@ -10,6 +10,7 @@ import ClientFeedback from '../../features/ClientFeedback/ClientFeedback';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import PromotedBox from '../../features/PromotedBox/PromotedBox';
 import SalesBox from '../../features/SalesBox/SalesBox';
+import Chat from '../../features/Chat/Chat';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -21,6 +22,7 @@ const Homepage = () => (
     <ClientFeedback />
     <BrandsBar />
     <CompareList />
+    <Chat />
   </div>
 );
 
