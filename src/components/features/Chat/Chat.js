@@ -8,7 +8,7 @@ import { faSync, faTimes, faRobot } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const Chat = () => {
-  const [chatOpen, setChatOpen] = useState(true);
+  const [chatOpen, setChatOpen] = useState(false);
 
   const handleClick = e => {
     e.preventDefault();
