@@ -25,6 +25,7 @@ const ProductBox = ({
   favorite,
   toCompare,
   id,
+  image,
 }) => {
   // const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
@@ -42,13 +43,7 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <div
-        className={styles.photo}
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
-          backgroundSize: 'cover',
-        }}
-      >
+      <div className={styles.photo} style={{ backgroundImage: `url(${image})` }}>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small' onClick={handleModal}>
@@ -124,6 +119,7 @@ ProductBox.propTypes = {
   userStars: PropTypes.number,
   favorite: PropTypes.bool,
   toCompare: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default ProductBox;
