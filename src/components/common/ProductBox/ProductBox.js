@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
+
+
+
 // import { changeIsFavorite } from '../../../redux/productsRedux';
 import {
   faStar,
@@ -13,8 +17,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+
 import ProductStars from '../ProductStars/ProductStars';
 import ProductModal from '../ProductModal/ProductModal';
+
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  toggleToCompare,
+  getCounttoCompare,
+  getCompare,
+} from '../../../redux/productsRedux';
 
 const ProductBox = ({
   name,
@@ -27,7 +39,7 @@ const ProductBox = ({
   id,
   image,
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [isfavorite, setIsFavorite] = useState(favorite);
   const toggleIsFavorite = e => {
@@ -40,7 +52,20 @@ const ProductBox = ({
     e.preventDefault();
     setShowModal(!showModal);
   };
+  const numberOfCompares = useSelector(getCounttoCompare);
+  const prodId = id;
 
+  const handleCompare = (e, prodId) => {
+    e.preventDefault();
+
+    if (numberOfCompares < 4 && toCompare === false) {
+      dispatch(toggleToCompare(prodId));
+    } else if (numberOfCompares === 4 && toCompare === false) {
+      console.log('cant add more than 4 to compare');
+    } else if (toCompare === true) {
+      dispatch(toggleToCompare(prodId));
+    }
+  };
   return (
     <div className={styles.root}>
       <Link to={`/product/${name}-${id}`}>
@@ -59,7 +84,9 @@ const ProductBox = ({
             </Button>
           </div>
         </div>
+
       </Link>
+
       <div className={styles.content}>
         <h5>{name}</h5>
         <div className={styles.stars}>
@@ -84,7 +111,11 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button className={clsx(toCompare && styles.active)} variant='outline'>
+          <Button
+            className={clsx(toCompare && styles.activeCompare)}
+            variant='outline'
+            onClick={e => handleCompare(e, prodId)}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
