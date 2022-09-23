@@ -109,7 +109,7 @@ const ProductBox = ({
             promo,
             priceOld,
             stars,
-            userStars,
+            // userStars,
             favorite,
             toCompare,
             id,

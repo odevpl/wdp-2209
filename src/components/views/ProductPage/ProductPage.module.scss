@@ -3,3 +3,243 @@
 .root {
   padding: $base-padding 0;
 }
+  .photocontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+
+    .bigphoto{
+      padding: 1rem 0;
+      width: 100%;
+      height: 90vh;
+
+      .greyspace {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 90%;
+        background-color:$gallery-border;
+        padding-right: 1rem;
+        padding-bottom : 1rem;
+
+        .arrowboxspace{
+          width: 3rem;
+          height: 3rem;
+          border: 2px solid black;
+
+          div{
+            width:100%;
+            height:100%;
+            transform: rotate(-45deg);
+
+            span {
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .smallphotos {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      .smallbox{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 2px;
+        width: 20%;
+        height: 6rem;
+        background-color:$gallery-border;
+
+        .arrowbox{
+          width: 3rem;
+          height: 3rem;
+          border: 2px solid black;
+          transform: translate(-1.5rem,0);
+
+          span{
+            line-height: 3rem;
+            font-weight: 600;
+          }
+
+        }
+
+        .secondarrowbox{
+          width: 3rem;
+          height: 3rem;
+          border: 2px solid black;
+          transform: translate(3.5rem,0);
+          background-color: $primary;
+          border: 1px solid $primary;
+
+          span{
+            line-height: 3rem;
+            font-weight: 600;
+            color: $text-hover-color;
+          }
+
+        }
+      }
+    }
+  }
+
+  .header{
+    line-height : 3rem;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  .arrowbox{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    margin: auto;
+
+
+    span{
+      line-height: 3rem;
+      font-weight: 600;
+    }
+  }
+
+  .secondarrowbox{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    transform: translate(3.5rem,0);
+    background-color: $primary;
+    border: 1px solid $primary;
+
+    span{
+      line-height: 3rem;
+      font-weight: 600;
+      color: $text-hover-color;
+    }
+  }
+
+  .bottomline {
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid $gallery-border;
+    padding: 1.5rem 0;
+  }
+
+  .crossed {
+    text-decoration: line-through;
+    color: $gallery-border;
+    margin: 1rem;
+  }
+
+  .blackbox {
+    margin: 1rem;
+    background-color:$text-color;
+    color: $text-hover-color;
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  .addtocart{
+    display: flex;
+    flex-direction: row;
+    line-height: 3rem;
+    margin: 1rem 0;
+    width: 9rem;
+    height: 3rem;
+    background-color: $primary;
+  }
+
+  .box{
+    margin: 0 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid  $text-color;
+    line-height: 3rem;
+  }
+
+  .smallerbox{
+    margin: 0 1rem;
+    width: 4rem;
+    height: 2rem;
+    border: 2px solid  $text-color;
+    line-height: 2rem;
+  }
+  .smallerboxtwo {
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid  $text-color;
+    line-height: 2rem;
+  }
+
+  .smallerboxtwoactive {
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid  $primary;
+    line-height: 2rem;
+    color: $primary;
+  }
+
+  .left{
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .highlight {
+    font-weight: 600;
+    margin-right: 2rem;
+  }
+  .socialbutton {
+    height:3rem;
+    width:6rem;
+    border: none;
+    line-height: 3rem;
+    margin: 1rem;
+
+    &.blue {
+      background-color: $fbblue;
+    }
+
+    &.white {
+      color: $text-hover-color;
+    }
+  }
+
+  .whitebox{
+    height:3rem;
+    width:6rem;
+    border: 1px solid black;
+    line-height: 3rem;
+    margin: 1rem;
+  }
+
+  .red {
+    color: $red;
+  }
+
+  .blue {
+    color: $blue;
+  }
+
+  .white{
+    color: $text-hover-color;
+  }
+
+
+
+
+
+
+
+
+
+
+
