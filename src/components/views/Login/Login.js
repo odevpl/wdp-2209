@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Login.module.scss';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -17,7 +18,11 @@ const Login = () => {
                 <span className={style.blue}>Przypomnij hasło</span>
               </p>
               <div className='d-flex flex-row justify-content-center align-items-center'>
-                <div className={style.loginbutton}>Zaloguj się </div>
+                <div className={style.loginbutton}>
+                  <Link to={'/'} style={{ textDecoration: 'none' }}>
+                    <span>Zaloguj się </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </form>

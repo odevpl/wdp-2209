@@ -32,5 +32,10 @@
     background-image: linear-gradient($loginbox-button-top-gradient,$loginbox-topborder);
     border-radius: 8%;
     font-weight: 700;
+
+     span {
+      color: black;
+      text-decoration: none;
+     }
   }
 }
