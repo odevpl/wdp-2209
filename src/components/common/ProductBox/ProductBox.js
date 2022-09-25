@@ -82,7 +82,6 @@ const ProductBox = ({
             </Button>
           </div>
         </div>
-
       </Link>
 
       <div className={styles.content}>
@@ -138,7 +137,7 @@ const ProductBox = ({
             promo,
             priceOld,
             stars,
-            userStars,
+            // userStars,
             favorite,
             toCompare,
             id,

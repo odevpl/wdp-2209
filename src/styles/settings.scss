@@ -9,6 +9,8 @@ $text-hover-color: white;
 
 $white: #ffffff;
 $darkOrange: #d58e32;
+$lightOrange: #fbd261;
+$blue : #3f91f4;
 
 $darkGrayOne: #2a2a2a;
 $darkGrayTwo: #292929;
@@ -142,6 +144,15 @@ $chat-hover-light: $lightGrayTwo;
 $chat-hover-dark: $darkOrange;
 $chat-robot: $darkOrange;
 $chat-msg-bg: $lightGrayFive;
+
+//login
+$loginbox-border: $darkGrayOne;
+$loginbox-topborder : $darkOrange;
+$loginbox-password: $blue;
+$loginbox-button-bottom-gradient:$darkOrange;
+$loginbox-button-top-gradient:$lightOrange;
+
+
 // animation
 $animation-name: onHoverColorAnimation;
 $animation-name: onHoverTextAnimation;

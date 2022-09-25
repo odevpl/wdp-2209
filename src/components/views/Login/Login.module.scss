@@ -1,0 +1,36 @@
+@import "../../../styles/settings.scss";
+
+.logincontainer {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  border: 1px solid $loginbox-border;
+  border-radius: 1%;
+  border-top: 10px solid $loginbox-topborder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 60vw;
+  height: 24rem;
+
+  p {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+
+    .blue {
+      color: $blue;
+    }
+  }
+
+  .loginbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3rem;
+    background-image: linear-gradient($loginbox-button-top-gradient,$loginbox-topborder);
+    border-radius: 8%;
+    font-weight: 700;
+  }
+}
