@@ -5,11 +5,7 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import { changeIsFavorite } from '../../../redux/productsRedux';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
@@ -20,7 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   toggleToCompare,
   getCounttoCompare,
-  getCompare,
+  changeIsFavorite,
 } from '../../../redux/productsRedux';
 
 const ProductBox = ({
@@ -37,11 +33,9 @@ const ProductBox = ({
 }) => {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
-  const [isfavorite, setIsFavorite] = useState(favorite);
   const toggleIsFavorite = e => {
     e.preventDefault();
-    // dispatch(changeIsFavorite(id));
-    setIsFavorite(!isfavorite);
+    dispatch(changeIsFavorite(id));
   };
 
   const handleModal = e => {
@@ -84,7 +78,7 @@ const ProductBox = ({
         <div className={styles.outlines}>
           <Button
             onClick={toggleIsFavorite}
-            className={clsx(isfavorite && styles.active)}
+            className={clsx(favorite && styles.active)}
             variant='outline'
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
@@ -124,7 +118,7 @@ const ProductBox = ({
             id,
           }}
           handleModal={handleModal}
-          isfavorite={isfavorite}
+          isfavorite={favorite}
           toggleIsFavorite={toggleIsFavorite}
         />
       )}
