@@ -10,8 +10,15 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../../common/Button/Button';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Swipeable from '../../common/Swipeable/Swipeable';
 const PromotedBox = () => {
   //Variables to render template
+  const swipeLeft = () => {
+    console.log('Swipe Left Works');
+  };
+  const swipeRight = () => {
+    console.log('Swipe Right Works');
+  };
   const name = 'Aenean Ru Bristique';
   const stars = 2;
   const priceOld = 250;
@@ -109,30 +116,32 @@ const PromotedBox = () => {
               </div>
             </div>
           </div>
-          <div className='col-8'>
-            <div
-              className={styles.photoRight}
-              style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
-                backgroundSize: 'cover',
-              }}
-            >
-              <div className={styles.contentRight}>
-                <h2>
-                  INDOOR <span>FURNITURE</span>
-                </h2>
-                <p>SAVE UP TO 50% OF ALL FURNITURE</p>
-                <Button className={styles.buttonContentRight}>SHOP NOW</Button>
+          <div className='col-md-8 col-sm-12'>
+            <Swipeable leftAction={swipeLeft} rightAction={swipeRight}>
+              <div
+                className={styles.photoRight}
+                style={{
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/${id}.jpeg)`,
+                  backgroundSize: 'cover',
+                }}
+              >
+                <div className={styles.contentRight}>
+                  <h2>
+                    INDOOR <span>FURNITURE</span>
+                  </h2>
+                  <p>SAVE UP TO 50% OF ALL FURNITURE</p>
+                  <Button className={styles.buttonContentRight}>SHOP NOW</Button>
+                </div>
+                <div className='row'>
+                  <Button className={styles.buttonPromo}>
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                  </Button>
+                  <Button className={styles.buttonPromo}>
+                    <FontAwesomeIcon icon={faChevronRight} />
+                  </Button>
+                </div>
               </div>
-              <div className='row'>
-                <Button className={styles.buttonPromo}>
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                </Button>
-                <Button className={styles.buttonPromo}>
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </Button>
-              </div>
-            </div>
+            </Swipeable>
           </div>
         </div>
       </div>
