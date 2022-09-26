@@ -12,11 +12,16 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 import SearchPage from './components/views/SearchPage/SearchPage';
+
 import Blog from './components/views/Blog/Blog';
+
+import CartPage from './components/views/CartPage/CartPage';
+
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
+
       <MainLayout>
         <Routes>
           <Route path={'/'} element={<Homepage />} />
@@ -25,6 +30,8 @@ const App = () => (
           <Route path={'/blog'} element={<Blog />} />
         </Routes>
       </MainLayout>
+
+
     </BrowserRouter>
   </Provider>
 );

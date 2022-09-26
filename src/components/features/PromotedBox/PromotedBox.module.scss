@@ -207,3 +207,29 @@
         opacity: 1;
     }
   }
+
+  @media (max-width: 426px) {
+    .colHover{
+      display:none;
+      background-color: red;
+    }
+
+    .contentRight{
+      height: 30%;
+      h2{
+        font-size: 20px;
+      }
+      .buttonContentRight{
+        padding: 5px;
+        font-size: 10px;
+        top: 83%;
+      }
+      p{
+        font-size: 10px;
+      }
+    }
+    .buttonPromo{
+      height: 5%;
+      padding: 5px;
+    }
+  }
