@@ -6,8 +6,8 @@ const Gallery = () => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row'>
-          <div className='col-sm-6'>
+        <div className='row '>
+          <div className='col-sm-6 '>
             <div className='row no-gutters'>
               <div className={'col ' + styles.heading}>
                 <h3>Furniture gallery</h3>
@@ -19,7 +19,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          <div className='col'>
+          <div className='col d-none d-sm-block'>
             <div
               className={styles.leftPhoto}
               style={{

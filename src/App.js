@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
@@ -11,11 +12,24 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 import SearchPage from './components/views/SearchPage/SearchPage';
-import CartPage from './components/views/CartPage/CartPage';
+
+import Blog from './components/views/Blog/Blog';
+=======import CartPage from './components/views/CartPage/CartPage';
+
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
+
+      <MainLayout>
+        <Routes>
+          <Route path={'/'} element={<Homepage />} />
+          <Route path={'/shop/:categoryId'} element={<ProductList />} />
+          <Route path={'/product/:productId'} element={<ProductPage />} />
+          <Route path={'/blog'} element={<Blog />} />
+        </Routes>
+      </MainLayout>
+
       <Switch>
         <Route exact path={'/cart'} component={CartPage} />
         <MainLayout>
@@ -27,6 +41,7 @@ const App = () => (
           </Switch>
         </MainLayout>
       </Switch>
+
     </BrowserRouter>
   </Provider>
 );

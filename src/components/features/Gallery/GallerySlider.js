@@ -14,9 +14,27 @@ import { useSelector } from 'react-redux';
 import { getAll } from '../../../redux/productsRedux';
 import Button from '../../common/Button/Button';
 import clsx from 'clsx';
+import { useState } from 'react';
 
 const GallerySlider = () => {
   const topSellers = useSelector(getAll);
+
+  const allPictures = useSelector(state => state.products);
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+  console.log(allPictures);
+
+  const goBack = () => {
+    const isFirstPicture = currentIndex === 0;
+    const newIndex = isFirstPicture ? allPictures.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goNext = () => {
+    const isLastPicture = currentIndex === allPictures.length - 1;
+    const newIndex = isLastPicture ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
 
   return (
     <div className={styles.root}>
@@ -39,7 +57,7 @@ const GallerySlider = () => {
       <div
         className={styles.photo}
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/aenean-ru-bristique-3.jpeg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/products/aenean-ru-bristique-${currentIndex}.jpeg)`,
           backgroundSize: 'cover',
         }}
       >
@@ -87,7 +105,7 @@ const GallerySlider = () => {
         </div>
       </div>
       <div className={'row no-gutters ' + styles.sliderList}>
-        <div className={'col-auto ' + styles.sliderArrow}>
+        <div className={'col-auto ' + styles.sliderArrow} onClick={goBack}>
           {' '}
           <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
         </div>
@@ -103,7 +121,7 @@ const GallerySlider = () => {
           ></div>
         ))}
 
-        <div className={'col-auto ' + styles.sliderArrow}>
+        <div className={'col-auto ' + styles.sliderArrow} onClick={goNext}>
           {' '}
           <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
         </div>
